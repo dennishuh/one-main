@@ -1,38 +1,175 @@
+@import '../node_modules//card-react/lib/card.css';
+
 .App {
-  text-align: center;
+	width: 960px;
+	margin: 32px;
+	font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header p {
+	font-size: 16px;
+	margin-bottom: 32px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-inputs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
-.App-link {
-  color: #61dafb;
+.input-container {
+	border: 1px solid #d0d5d8;
+	padding: 8px 8px 30px 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+	background: #00a39e;
+	width: 270px;
+	text-align: center;
+	border: 0;
+	padding: 12px 0;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: capitalize;
+	margin-top: 24px;
+}
+
+label {
+	width: 100%;
+	font-size: 12px;
+	padding: 0 0 12px 0;
+	display: block;
+	font-weight: bold;
+}
+
+input {
+	border: 0;
+	font-size: 14px;
+	padding: 0;
+}
+
+.error {
+	background: #fae6e9;
+	color: #ce0c24;
+	margin: 0;
+	border: 1px solid #d0d5d8;
+	padding: 4px 8px;
+	font-size: 12px;
+	margin: 5px -9px -1px;
+}
+
+.input-error {
+	padding-bottom: 0px;
+}
+
+.input-error label {
+	color: #ce0c24;
+}
+
+.radios-container {
+	display: grid;
+	grid-template-columns: 0.5fr 1fr;
+}
+
+.radio-container {
+	display: grid;
+	grid-template-columns: 20px 1fr;
+}
+
+.radio-container label {
+	font-size: 14px;
+	padding: 0 0 0 8px;
+	font-weight: normal;
+}
+
+.checking-account {
+	padding: 26px 21px 26px 21px;
+	text-align: center;
+	font-size: 14px;
+	background: #f4f7fc;
+	border: 1px solid #d0d5d8;
+}
+
+.checking-account .jp-card-container {
+	display: none;
+}
+
+.checking-account img {
+	width: 100%;
+}
+
+#card-wrapper {
+	padding: 122px 21px 121px;
+	text-align: center;
+	font-size: 14px;
+	background: #f4f7fc;
+	border: 1px solid #d0d5d8;
+}
+
+.check-info {
+	display: grid;
+	grid-template-columns: 80px 80px;
+	grid-column-gap: 38px;
+	padding: 0 25px;
+}
+
+.pointer-info {
+	width: 80px;
+}
+
+.pointer-info p {
+	margin: 0;
+	font-weight: bold;
+	font-size: 11px;
+	width: 70px;
+	margin: 0 auto;
+}
+
+.pointer-info .horizontal-border {
+	width: 80px;
+	border: 1px solid #00a39e;
+	margin: 0 auto;
+}
+
+.pointer-info .vertical-border {
+	border-left: 2px solid #00a39e;
+	width: 1px;
+	height: 20px;
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 760px) {
+	.App {
+		width: 100%;
+		margin: 0 12px 20px 12px;
+	}
+
+	.form-inputs {
+		grid-template-columns: 1fr;
+	}
+
+	.pointer-info {
+		width: 100%;
+	}
+
+	.check-info {
+		display: grid;
+		grid-template-columns: 25% 25%;
+		grid-column-gap: 3%;
+		padding: 0 5%;
+	}
+
+	button {
+		width: 100%;
+	}
+
+	#card-wrapper {
+		padding: 48px 20px;
+	}
 }
